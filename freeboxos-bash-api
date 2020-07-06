@@ -1,4 +1,4 @@
-/tmp/script.log {
+/var/log/freeboxos-bash-api.log {
     weekly
     missingok
     notifempty
@@ -6,5 +6,4 @@
     rotate 26
     compress
     delaycompress
-    endscript
 }
