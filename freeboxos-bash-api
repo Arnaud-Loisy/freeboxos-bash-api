@@ -1,0 +1,10 @@
+/tmp/script.log {
+    weekly
+    missingok
+    notifempty
+    sharedscripts
+    rotate 26
+    compress
+    delaycompress
+    endscript
+}
