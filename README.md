@@ -120,4 +120,4 @@ up_max_rate=$(get_json_value_for_key "$up_xdsl" 'result.up.maxrate')
 
 echo "Max Upload xDSL rate: $up_max_rate kbit/s"
 ```
-
+![alt text](https://github.com/Arnaud-Loisy/freeboxos-bash-api/blob/Master/capture.jpg?raw=true)
