@@ -6,12 +6,15 @@ Access [FreeboxOS API](http://dev.freebox.fr/sdk/os/#api-list) from bash
 Démarrage
 -----------
 
-You need to have `curl` and `openssl` installed.
+You need to have `curl` and `openssl` installed for the API, `logrotate` for the log rotation of the script and `cronie` for scheduling it.
 
 Get the source:
 
     $ curl -L http://github.com/Arnaud-Loisy/freeboxos-bash-api/raw/master/freeboxos_bash_api.sh > freeboxos_bash_api.sh
     $ curl -L http://github.com/Arnaud-Loisy/freeboxos-bash-api/raw/master/script_reboot_auto.sh > script_reboot_auto.sh
+    $ curl -L http://github.com/Arnaud-Loisy/freeboxos-bash-api/raw/master/script_reboot_auto.sh > /etc/logrotate.d/freeboxos-bash-api
+    $ touch /var/log/freebox-bash-api.log && chown `whoami` /var/log/freebox-bash-api.log
+    $ crontab -l | { cat; echo "*/5 * * * * `pwd`/script_reboot_auto.sh"; } | crontab - 
     
 Appairage avec la Freebox
 -------------------------
