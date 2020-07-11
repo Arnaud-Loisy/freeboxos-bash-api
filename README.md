@@ -11,6 +11,7 @@ You need to have `curl` and `openssl` installed.
 Get the source:
 
     $ curl -L http://github.com/Arnaud-Loisy/freeboxos-bash-api/raw/master/freeboxos_bash_api.sh > freeboxos_bash_api.sh
+    $ curl -L http://github.com/Arnaud-Loisy/freeboxos-bash-api/raw/master/script_reboot_auto.sh > script_reboot_auto.sh
     
 Appairage avec la Freebox
 -------------------------
