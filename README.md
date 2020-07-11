@@ -121,4 +121,4 @@ up_max_rate=$(get_json_value_for_key "$up_xdsl" 'result.up.maxrate')
 echo "Max Upload xDSL rate: $up_max_rate kbit/s"
 ```
 Capture des statistiques de synchronisation après mise en place de script de reboot auto
-![Capture des statistiques de synchronisation après mise en place de script de reboot auto](https://github.com/Arnaud-Loisy/freeboxos-bash-api/blob/Master/synchro.jpg?raw=true)
+![Capture](synchro.jpg?raw=true)
