@@ -7,9 +7,9 @@ login_freebox "$MY_APP_ID" "$MY_APP_TOKEN"
 answer=$(call_freebox_api '/connection/xdsl/')
 snr=`dump_json_keys_values "$answer" | grep down.snr_10 | awk {'print $3'}`
 debit=`dump_json_keys_values "$answer" | grep down.rate | awk {'print $3'}`
-answer=$(call_freebox_api '/lan/browser/pub/ether-00:1d:7d:00:7e:02/')
+answer=$(call_freebox_api '/lan/browser/pub/ether-00:1d:7d:00:XX:XX/')
 PC_is_up=`dump_json_keys_values "$answer" | grep result.reachable | awk {'print $3'}`
-if [ $snr -gt 50 ] && [ $debit -lt 1300 ]  && [ !PC_is_up ]; then
+if [ $snr -gt 50 ] && [ $debit -lt 1900 ]  && [ !PC_is_up ]; then
         echo "`date +"%m-%d-%Y %H:%M"` - SNR_10 : $snr Debit : $debit PC_is_UP : $PC_is_up" >> $Logfile
         echo "`date +"%m-%d-%Y %H:%M"` - Reboot de la boiboite!" >> $Logfile
         sleep 10
